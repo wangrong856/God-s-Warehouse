@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li class="active">1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <ol>
+    <li class="active">内容1</li>
+    <li>内容2</li>
+    <li>内容3</li>
+  </ol>
+  <script>
+    var ll=document.querySelectorAll("ul>li")
+    var oo=document.querySelectorAll("ol>li")
+    // console.log(ll,oo);
+    for(var i=0;i<ll.length;i++){
+        ll[i].index=i
+        ll[i].onclick=function(){
+            // console.log(i);
+            // console.log(this.index);
+            for(var j=0;j<oo.length;j++){
+                ll[j].className=''
+                oo[j].className=''
+            }
+            ll[this.index].className='active'
+            oo[this.index].className='active'
+        }
+    }
+  </script>
+</body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    ul{
+        width: 350px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    ul>li{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    ol{
+        width: 350px;
+        height: 350px;
+        border: 1px solid #000;
+        text-align: center;
+    }
+    ol li{
+        display: none;
+    }
+    .active{
+        background-color: plum;
+    }
+    .active{
+       display: block;
+    }
+</style>
+</html>
