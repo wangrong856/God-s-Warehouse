@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="tab-ctrl">
+      <div class="tab-list">
+        <span class="active">娱乐</span>
+
+        <span>新闻</span>
+
+        <span>体育</span>
+      </div>
+
+      <ul>
+        <li class="active">11111111</li>
+
+        <li>22222222</li>
+
+        <li>33233333</li>
+      </ul>
+    </div>
+  </body>
+</html>
+<script>
+  var tabCtrl = document.querySelector("#tab-ctrl");
+
+  var tabList = tabCtrl.querySelectorAll(".tab-list span");
+
+  var conCtrl = tabCtrl.querySelectorAll("ul li");
+
+  var index = 0; // 自定义tab的索引
+
+  var len = tabList.length;
+
+  //var不存在块级作用域
+
+  for (var i = 0; i < len; i++) {
+    (function (i) {
+      tabList[i].addEventListener("mouseenter", function () {
+        tabList[index].className = conCtrl[index].className = "";
+        this.className = conCtrl[i].className = "active";
+        index = i;
+      });
+    })(i);
+  }
+
+  //let存在块级作用域 在这里相当于加了一个自定义属性
+
+  for (let i = 0; i < length; i++) {
+    tabList[i].addEventListener("mouseenter", function () {
+      for (var j = 0; j < length; j++) {
+        tabList[j].className = conCtrl[j].className = "";
+
+        this.className = conCtrl[i].className = "active";
+      }
+    });
+  }
+</script>

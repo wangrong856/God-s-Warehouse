@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let arr = [
+    {
+      id: "1",
+      key: "1",
+      value: "明月",
+    },
+    {
+      id: "3",
+      key: "2",
+      value: "可欣",
+    },
+    {
+      id: "2",
+      key: "3",
+      value: "小红",
+    },
+    {
+      id: "1",
+      key: "1",
+      value: "小馨",
+    },
+    {
+      id: "1",
+      key: "2",
+      value: "小静",
+    },
+  ];
+  let newArr = [];
+  let obj = {};
+  for (var i = 0; i < arr.length; i++) {
+    if (!obj[arr[i].key]) {
+      newArr.push(arr[i]);
+      obj[arr[i].key] = true;
+    }
+  }
+  console.log(newArr);
+</script>
