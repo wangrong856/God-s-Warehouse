@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxc{
+            width: 200px;
+            height: 200px;
+            font-size: 24px;
+            border: 1px solid palevioletred;
+            text-align: center;
+            line-height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>菜单1</button><button>菜单2</button><button>菜单3</button>
+    <div class="boxc" style="display: block;">内容1</div>
+    <div class="boxc">内容2</div>
+    <div class="boxc">内容3</div>
+    <script>
+        var btuon=document.querySelectorAll('button')
+        var divs=document.querySelectorAll('.boxc')
+        for(let a=0;a<btuon.length;a++){
+            btuon[a].onclick=function(){
+                for(let b=0;b<divs.length;b++){
+                    divs[b].style.display="none"
+                }
+                divs[a].style.display="block"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       // 找出字符串中 "o" 出现的位置和次数 		
+			var str = "abcoefoxyozzopp";
+			var index = str.indexOf('o');
+			var count = 0; // 存储次数的变量
+			while (index != -1) {
+				console.log('o 出现的位置为：' + index);
+				count++;
+				index = str.indexOf('o', index + 1);
+			}
+			console.log('o 出现的次数为：' + count);			
+
+    </script>
+
+
+</body>
+
+</html>

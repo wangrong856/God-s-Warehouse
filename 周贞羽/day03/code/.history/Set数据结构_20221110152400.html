@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
+
+Set本身是一个构造函数，用来生成 Set 数据结构。
+
+*/
+
+      var myset = new Set()
+      // 添加成员
+      myset.add(1)
+      myset.add(2)
+      myset.add(2)
+      // 长度
+      console.log(myset.size)
+
+      console.log(myset.has(11))
+    </script>
+  </body>
+</html>
