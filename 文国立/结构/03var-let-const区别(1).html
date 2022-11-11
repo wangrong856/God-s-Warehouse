@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>111</button>
+    <button>222</button>
+    <button>333</button>
+    <button>444</button>
+    <button>555</button>
+  </body>
+  <script>
+    // var 有变量提升
+    /* 
+    console.log(aa) //undefined
+    var aa = 23
+    if (true) {
+      console.log(aa) //23
+    }
+    function fn() {
+      console.log(aa) //undefined
+      var aa = 2
+    }
+    fn()
+    console.log(aa) //23
+    */
+
+    // for (let i = 0; i < 4; i++) {
+    //   setTimeout(function () {
+    //     console.log(i)
+    //   }, 0)
+    //   console.log(i)
+    // }
+
+    //  let 可以定义变量  没有变量的提升
+    // console.log(num)
+    // let num = 10
+
+    // function fn(n) {
+    //   if (n) {
+    //     let val = 'hello'
+    //   } else {
+    //     console.log(val) //val is not defined
+    //   }
+    //   console.log(val) //val is not defined
+    // }
+
+    // fn(false)
+    // let 有块级作用域
+    // if (true) {
+    //   let n = 90
+    // }
+    // console.log(n) //n is not defined
+    // 禁止重复声明  同一作用域里
+
+    // let v = 'hello'
+    // if (true) {
+    //   let v = 'word'
+    // }
+    // // let v = 90
+    // console.log(v) //hello
+    // let 暂时性死区
+    // 在代码块内，使用let命令声明变量之前，该变量都是不可用的 称为暂时性死区
+    // console.log(vv)
+    // let vv = 'hello'
+
+    // var 声明的变量 和function声明的函数 属于window对象
+    // let 和const 声明的全局变量不会挂在window对象 下面
+    // let fn = 78
+    // console.log(window)
+    // function ffn() {
+    //   console.log('ffn')
+    // }
+    // window.ffn()
+
+    // const声明一个只读的常量。一旦声明，常量的值就不能改变。
+    // 常量首字母要大写
+    // const obj = { name: 123 }
+    // obj.age = 78
+
+    // let btnArr = document.querySelectorAll('button')
+    // for (let i = 0; i < btnArr.length; i++) {
+    //   btnArr[i].addEventListener('click', function () {
+    //     console.log(i)
+    //   })
+    // }
+
+    let btnArr = document.querySelectorAll('button')
+    for (var i = 0; i < btnArr.length; i++) {
+      // btnArr[i].index = i
+      btnArr[i].addEventListener('click', function () {
+        console.log(i)
+      })
+    }
+  </script>
+</html>
