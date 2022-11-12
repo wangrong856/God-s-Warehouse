@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 统计最多字符串
+    function findMaxDuplicateChar(str) {
+        if (str.length == 1) {
+            return str;
+        }
+        var charObj = {};
+        for (var i = 0; i < str.length; i++) {
+            if (!charObj[str.charAt(i)]) {
+                charObj[str.charAt(i)] = 1;
+            } else {
+                charObj[str.charAt(i)]++;
+            }
+        }
+        console.log(charObj);
+        var maxChar = '',
+            maxVal = 0;
+        for (var j in charObj) {
+            if (charObj[j] > maxVal) {
+                maxChar = j;
+                maxVal = charObj[j];
+            }
+        }
+        return maxChar + ':' + maxVal;
+    }
+    var str = 'abcaakjbbouliuiuououiouoi';
+    console.log(findMaxDuplicateChar(str));
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       
+    <meta charset="UTF-8">
+       
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       
+    <script src="./axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var shuzu = []
+        async function getlist() {
+            let { data: res } = await axios.get('http://shiyansong.cn:8080/area/city?level=1')
+            return res.body;
+
+        }
+        getlist()
+
+        async function fn() {
+            let arr = await getlist();
+            var obj = {};
+            arr.forEach((item) => {
+                let letter = item.short.slice(0, 1)
+                if (arr[letter]) {
+                    obj[letter].push(item)
+                } else {
+                    obj[letter] = [item]
+                }
+            })
+            console.log(obj);
+        }
+        fn()
+    </script>
+</body>
+
+</html>
