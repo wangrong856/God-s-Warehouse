@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 入职薪水10k，每年涨幅5%，50年后工资是多少  用for循环实现
+        function money(){
+            var num=10000
+            for(var i=1;i<50;i++){
+                num+=num*0.05
+            }
+            console.log(num);
+        }
+        money()
+    </script>
+</body>
+</html>
