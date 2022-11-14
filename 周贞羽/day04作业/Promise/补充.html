@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+Promise.reject(reason)方法也会返回一个新的 Promise 实例，该实例的状态为rejected。
+
+等同于
+new Promise(reject=>{
+  reject()
+})
+
+*/
+
+      // Promise.reject('err')
+      //   .then(
+      //     (res) => {
+      //       console.log(res, 0)
+      //     },
+      //     (err) => {
+      //       console.log(err, 2)
+      //     }
+      //   )
+      //   .catch((err) => {
+      //     console.log(err, 'err')
+      //   })
+// 错误执行catch
+      Promise.reject('err')
+        .then((res) => {
+          console.log(res, 0)
+        })
+        .catch((err) => {
+          console.log(err, 'err')
+        })
+// 成功执行then回调函数
+      Promise.resolve('123')
+        .then((res) => {
+          console.log(res, 0)
+        })
+        .catch((err) => {
+          console.log(err, 'err')
+        })
+     
+    </script>
+  </body>
+</html>

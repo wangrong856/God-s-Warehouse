@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./axios.min.js"></script>
+</head>
+<body>
+    <button></button>
+    <script>
+        function fn(){
+            var token=JSON.parse(localStorage.getItem("tokens"));
+            if(!token){
+                return new Promise((resolve)=>{
+                    axios.get('http://shiyansong.cn:8888/api/private/v1/login',
+                    {
+                        params:{
+                            username:'admin',
+                            paddword:'123456'
+                        }
+                    }
+                   )
+                    localStorage.setItem("tokens",JSON.stringify(res.data.data.token))
+                    resolve(res.data.data.token)
+                })
+            }else{
+                return new Promise((resolve)=>{
+                    resolve(token)
+                })
+            }
+        }
+        var anniu=document.querySelectorAll('button')
+        anniu.addEventListener('click',function(){
+            fn().then(res=>{
+                console.log(res);
+            })
+        })
+    </script>
+</body>
+</html>
