@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p>用户名： <input type="text" id="username" value="admin"></p>
+        <p>密码： <input type="text" id="pwd" value="123456"></p>
+        <button id="btn">登录</button>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="module">
+    // 引入
+    import fn from './dl.js'
+    let name =document.querySelector('#username')
+    let pwd =document.querySelector('#pwd')
+    let btn =document.querySelector('#btn')
+    btn.onclick=function(){
+        fn(name.value,pwd.value)
+    }
+</script>
+<style>
+    body{
+        background-color:pink;
+    }
+    .box{
+        width: 400px;
+        height: 250px;
+        background-color:yellowgreen;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 30px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+</style>
