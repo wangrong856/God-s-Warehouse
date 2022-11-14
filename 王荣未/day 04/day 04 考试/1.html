@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function fn(a) {
+            a = a.split("")
+            var zhen = /[A-Z]/
+            var arr = a.map((t, i) => {
+                if(zhen.test(t)){
+                    return '-' + t.toLowerCase()
+                }else if (!zhen.test(t) && a[i - 1] == '-') {
+                    return t.toUpperCase()
+                } else if(t == '-'){
+                    return t = ''
+                }
+                return t
+            })
+            return arr.join("")
+        }
+        console.log(fn("howAreYou"));
+        console.log(fn("how-are-you"));
+
+        function fnUrl(a) {
+            var obj = {}
+            a = a.slice(a.indexOf("?") + 1).split("&")
+            a.forEach((t, i) => {
+                // 方法一
+                // t = t.split("=")
+                // obj[t[0]] = t[1]
+                // 方法二
+                obj[t.slice(0, t.indexOf('='))] = t.slice(t.indexOf('=') + 1)
+                // 方法三
+                // obj[t.split("=")[0]] = t.split("=")[1]
+            })
+            return obj
+        }
+        // console.log(fnUrl("http://172.168.100.1/?userrip=172.16.42&username=58769"));
+    </script>
+</body>
+
+</html>

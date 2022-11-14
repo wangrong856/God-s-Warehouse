@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./axios.min.js"></script>
+</head>
+
+<body>
+    <button id="btn">登陆</button>
+    <script>
+
+        // http://123.57.143.201:8888/api/private/v1/login
+        btn.onclick = function () {
+            var token = JSON.parse(localStorage.getItem("token"))
+            if (!token) {
+                new Promise((resolve, reject) => {
+                    axios.post("http://123.57.143.201:8888/api/private/v1/login?username=admin&password=1234567")
+                        .then(({ data: res }) => {
+                            if (res.meta.status === 200) {
+                                localStorage.setItem("token", JSON.stringify(res.data.token))
+                                resolve(res)
+                            } else {
+                                Promise.reject(new Error("登陆错误"))
+                            }
+                        })
+                })
+            } else {
+                Promise.resolve()
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(s) {
+            var zhen = /[A-Z]/
+            var arr = []
+            s = s.split("")
+            if (zhen.test(s)) {
+                s.forEach(item => {
+                    if (zhen.test(item)) {
+                        item = '-' + item.toLocaleLowerCase()
+                    }
+                    arr.push(item)
+                });
+            } else {
+                s.forEach((t,i)=>{
+                    if(i === 0) return arr.push(t)
+                    t = t.slice(0,1).toUpperCase() + t.slice(1)
+                    arr.push(t)
+                })
+            }
+            return arr.join("")
+        }
+        console.log(fn("asjdnhlkas-gsadlk-jalskdnl-jksadj"));
+        console.log(fn("asjdnhlkasGsadlkJalskdnlJksadj"));
+
+        var https = 'http://172.168.100.1/?user=172.168.100.1&username=5869'
+        function http(str){
+            str = str.slice(str.indexOf('?') + 1).split("&")
+            var obj = {}
+            str.forEach((t,i)=>{
+                t = t.split("=")
+                obj[t[0]] = t[1]
+            })
+            return obj
+        }
+        console.log(http(https));
+    </script>
+</body>
+
+</html
