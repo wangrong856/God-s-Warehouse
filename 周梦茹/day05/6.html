@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 对一个数组进行随机排序
+    var arr=[1,2,3,5,4,6,8,2,9,8,5]
+    var newArr=[]
+    while(newArr.length<arr.length) {
+        var sj=Math.floor(Math.random()*arr.length)
+        // console.log(sj);
+        newArr.push(arr[sj])
+    }
+    console.log(newArr);
+</script>
+</html>

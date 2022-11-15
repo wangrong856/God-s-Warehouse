@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 写一个函数，
+    // 能判断传入的一个数值是否是质数，
+    // 如果是质数返回true，如果不是质数返回false，(质数：从2开始只能被1和自身整数的数)
+    var a = prompt("请输入一个数字") - 0
+    function fn(x) {
+        for (var i = 2; i < x; i++) {
+            // console.log(x%i);
+            if (x % i) {
+                console.log("false");
+                break
+            } else {
+                console.log("true");
+                break
+            }
+        }
+    }
+    fn(a)
+</script>
+
+</html>

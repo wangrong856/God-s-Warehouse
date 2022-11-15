@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 3：统计一个给定字符串中字符出现的次数--返回一个对象
+    var arr = "11123123123123123"
+    var obj = {}
+    var str = ''
+    for (var i = 0; i < arr.length; i++) {
+        var key = arr[i]
+        // console.log(key);
+        if (obj[key])  {
+            obj[key]++
+        } else {
+            obj[key] = 1
+        }
+    }
+    console.log(obj);
+    let Nobj = {
+        maxName:"",
+        max:0,
+    }
+    for(var k in obj){
+        // console.log(obj[k]);
+        if(obj[k] > Nobj.max){
+            Nobj.max = obj[k]
+            Nobj.maxName = k
+        }
+    }
+    console.log(Nobj);
+</script>
+
+</html>

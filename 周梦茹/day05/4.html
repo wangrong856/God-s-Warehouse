@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 一、拼接或截取字符串
+    // 1.str.concat()：用于将一个或多个字符串拼接起来，返回拼接后的新字符串
+
+    // 参数：可以有多个，用来拼接到str上的字符串
+
+    // let str = 'hello';
+    // console.log(str.concat(' ', 'world')) //'hello world'
+    
+    
+    // 说明：此方法效率并不高，用“+”或者``模板字符串代替比较好
+
+    // 2.str.slice()：此方法用来提取一个字符串，并返回一个新的字符串
+
+    // 参数：1) beginIndex，表示从该索引处开始提取字符串的字符(包括)，如果为负数则从后开始计算
+
+    // 2) endIndex，表示从该索引处结束提取字符串(不包括)，如果省略则一直提取到字符串末尾，如果为负数从后开始计算
+
+    // let str = 'hello world';
+    // console.log(str.slice(6)) //'world'
+    // console.log(str.slice(-5, -3)) //'wo'
+
+    
+    
+
+    
+    // 3.str.substring()：此方法和slice方法功能相同都是提取一个字符串，并返回提取到的字符串
+
+    // 参数：1) startIndex，表示从该索引处开始提取字符串的字符(包括)
+
+    // 2) endIndex, 表示从该索引处结束提取字符串(不包括)
+
+    // 3) 上述两个参数：如果为负数或者NaN则都会被当做0，如果大于字符串的长度则会被当做字符串的长度来计算，如果 startIndex 大于 endIndex，则 substring 的执行效果就像两个参数调换了一样
+
+    // let str = 'hello world';
+    // console.log(str.substring(-1, 5))  //'hello'
+    // console.log(str.substring(5, -1))  //'hello'
+    // 1
+    // 2
+    // 3
+    // 二、删除字符串
+    // str.trim()：删除一个字符串两端的空白字符，并返回删除后的新字符串，不会改变原有字符串
+
+    // 三、改变字符串
+    // 1.str.toLowerCase()：此方法没有参数，会将调用该方法的字符串值转为小写形式，并返回
+
+    // 2.str.toUpperCase()：此方法没有参数，会将调用该方法的字符串值转为大写形式，并返回
+
+    // 3.str.replace()：可以将一个替换值替换字符串的一部分，返回替换后的新字符串
+
+    // 参数：1) 一个字符串中要被替换的子字符串或者正则表达式，默认值替换第一个，可以在正则表达式中设置全局模式，来替换所有匹配的子字符串
+
+    // 2) 一个替换值
+
+    // let str = 'hello world';
+    // console.log(str.replace(/o/g, "f")) //"hellf wfrld"
+    
+    
+    // 4.str.split()：可以使用一个指定的分隔符来将字符串拆分成数组，返回一个数组
+
+    // 参数：1) 分隔符，可以为一个字符串也可以为正则表达式，为空的话则将每个字符都拆分。默认全局拆分
+
+    // 2) 拆分的长度（可选），为一个整数用来限制拆分的个数，如果超过了这个数量则新数组中不返回剩下的文本
+
+    // let str = 'hello world';
+    // console.log(str.split(" ")) //["hello", "world"]
+    
+    
+    // 四、查询字符串
+    // 1.str.charAt()：从一个字符串中返回指定的字符
+
+    // 参数：index，介于0~length - 1之间的整数，默认为0
+
+    // let str = 'hello world';
+    // console.log(str.charAt(1)) //'e'
+    
+    
+    // 2.str.includes()：判断字符串中是否包含指定字符，包含则返回true，不包含则返回false
+
+    // 参数：subStr，指定的字符串
+
+    // let str = 'hello world';
+    // console.log(str.includes('hello')) //true
+    // console.log(str.includes('fire')) //flase
+    
+    
+    
+    // 3.str.indexOf()：判断字符串中是否包含指定字符，如果包含则返回该字符索引的位置(查找到了立即返回)，如果不包含则返回 - 1
+
+    // 参数：subStr，指定的字符串
+
+    // let str = 'hello world';
+    // console.log(str.indexOf('world')) //6
+    // console.log(str.indexOf('fire')) //-1
+    
+    
+    
+    // 4.str.lastIndexOf()：用法和indexOf基本相同，区别是lastIndexOf()是从后往前查找
+
+    // 5.str.search()：使用正则表达式查找指定字符串，如果找到则返回首次匹配成功的索引，没有找到则返回 - 1
+
+    // 参数：一个正则表达式，如果传入一个非正则表达式则会隐式的将其转换为正则表达式对象
+
+    // let str = 'hello world';
+    // console.log(str.search('world')) //6
+    // console.log(str.search(/w/)) //6
+ 
+
+    // 6.str.match()：返回一个字符串匹配正则表达式的结果, 如果未设置全局匹配，则会返回第一个完整匹配及其相关的捕获组，捕获组中包含有groups、index、input等属性。
+
+    // 参数：一个正则表达式，如果传入一个非正则表达式则会隐式的将其转换为正则表达式对象
+
+    let str = 'hello world';
+    console.log(str.match(/l/)) //["l", index: 2, input: "hello world", groups: undefined]
+    console.log(str.match(/l/g)) //["l", "l", "l"]
+
+</script>
+
+</html>
