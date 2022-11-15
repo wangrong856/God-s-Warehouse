@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 写一个函数，能返回传入的任意三个数字的最大值。
+     // 写一个函数，能返回传入的任意两个数字的最大值。
+     var a=prompt("请输入一个数字")-0
+    var b=prompt("请输入一个数字")-0
+    var c=prompt("请输入一个数字")-0
+    function fn(x,y,z) {
+        var arr=[x,y,z]
+        // console.log(arr);
+        arr.sort((q,w)=>{
+            return w-q
+        })
+        // console.log(arr);
+        alert("最大的数是"+arr[0])
+    }
+    fn(a,b,c)
+</script>
+</html>

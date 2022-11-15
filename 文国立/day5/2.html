@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1123,1, 23, 56, 7, 8, 9, 234, 56, 7, 8, 90, 0,]
+
+        // 冒泡排序
+        // for(var i = 0;i < arr.length - 1;i++){
+        //     for(var j = 0;j < arr.length - i;j++){
+        //         // 判断前一个是否大于后一个
+        //         if(arr[j] > arr[j + 1]){
+        //             // 如果大于就互换
+        //             var kong = arr[j]
+        //             // 获取第一个 赋值 吧大于第一个赋值改小的交换变量
+        //             arr[j] = arr[j + 1]
+        //             // 在吧大的赋值给小的
+        //             arr[j + 1] = kong
+        //         }
+        //     }
+        // }
+
+        // 选择排序
+        // var index
+        // for (var i = 0; i < arr.length; i++) {
+        //     index = i
+        //     for (var j = i + 1; j < arr.length; j++) {
+        //         if (arr[j] < arr[index]) {
+        //             index = j
+        //         }
+        //     }
+        //     if (index != j) {
+        //         var t = arr[i]
+        //         arr[i] = arr[index]
+        //         arr[index] = t
+        //     }
+        // }
+
+        // 插入排序
+        // 创建空数组
+        // var newArr = []
+        // // 先添加一项
+        // newArr.push(arr[0]) // 
+        // // 从第二次开始 循环遍历数组
+        // for (var i = 1; i < arr.length; i++) {
+        //     // 从后开始比较 获取数组最后一个下标 从后向前比较 j--
+        //     for (var j = newArr.length - 1; j >= 0; j--) {
+        //         // 那素有的和添加的比较
+        //         if (arr[i] > newArr[j]) {
+        //             // 从j + 1开始 的第0个 替换
+        //             newArr.splice(j + 1, 0, arr[i])
+        //             // 终止循环
+        //             break;
+        //         }
+        //         // 如果添加的第0项就头部添加
+        //         if (j == 0) {
+        //             // 头部添加第0项
+        //             newArr.unshift(arr[i])
+        //         }
+        //     }
+        // }
+
+        // console.log(newArr);
+        var str ='aaaaaaaaaaavvvvvvvvvvvbbbbbbbbbb'
+        var obj1={}
+    for(var i=0;i<str.length;i++){
+        if(obj1[str.charAt(i)]){
+            obj1[str.charAt(i)]++
+        }else{
+            obj1[str.charAt(i)]=1
+        }
+    }
+    for(const key in obj1){
+        console.log(key+"出现了"+obj1[key]+"次数");
+    }
+
+
+
+    
+
+var str="Hello world!"
+
+document.write(str.charAt(6))
+
+    </script>
+</body>
+
+</html>
