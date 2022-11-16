@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 封装函数翻转  形参
+        // function one(arr){
+        //     // 定义一个空数组 把翻转之后的数据添加进来
+        //     var newArr=[]
+        //     // 遍历原数组 这里实现翻转
+        //     for(var i=arr.length-1;i>=0;i--){
+        //         // 新数组的长度从0开始，新数组的第一个正好是原数组的最后一个
+        //         newArr[newArr.length]=arr[i]
+        //     }
+        //     return newArr
+        // }   
+        // // 实参
+        // var arr1=one([1,2,3,4,5])
+        // console.log(arr1);
+        // var arr2=one([9,8,7,6,5])
+        // console.log(arr2);
+        function fn(arr){
+            var newArr=[]
+            for(var i=arr.length-1;i>=0;i--){
+                newArr[newArr.length]=arr[i]
+            }
+            return newArr
+        }
+        var arr1=fn([1,2,3,4,5])
+        console.log(arr1);
+    </script>
+</body>
+</html>

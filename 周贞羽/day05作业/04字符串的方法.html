@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.charAt(下标)方法 返回字符串中指定位置的字符
+        let str='hello';
+        let s=str.charAt(1)
+        console.log(s);
+        // 2.concat()方法 连接两个或多个字符串
+        let st='Hello';
+        let ste='World'
+        let ss=st.concat(ste)
+        console.log(ss);//HelloWorld
+        // 3.indexOf()方法 返回指定的字符串值在字符串中首次出现的位置
+        let strr='Hello'
+        let sss=strr.indexOf('e')
+        console.log(sss);//下标
+        // 4.includes()方法 判断字符串中是否包含子字符串
+        var sr='Hello'
+        let sw=sr.includes('e')
+        console.log(sw);//true(boolean)
+        // 5.match() 方法 在字符串内检索指定的值
+        // 语法：string.match(regexp)
+        let strs='Hello'
+        let k=strs.match(/l/g)
+        console.log(k);//["l","l"]
+        // 6.repeat() 方法 字符串复制指定次数
+        let sh='Hello'
+        let l=sh.repeat(2)
+        console.log(l);//HelloHello
+        // 7.replace() 方法 一个字符替换另一个字符
+        let tt='Hello'
+        let u=tt.replace("l","o")
+        console.log(u);//Heolo
+        // 8.replaceAll() 方法 所有的都会被替换
+        let zy='Hello'
+        let y=zy.replaceAll('l','o')
+        console.log(y);
+        // 9.search() 方法 查找字符串  返回下标  //起始位置的下标
+        let zz='abcde'
+        let yy=zz.search('bc')
+        console.log(yy);
+        // 10.slice()方法 提取字符串中的某个部分 slice(start(开始下标), end(结束下标)) 不包含结束的，包含开始
+        let z='Hello'
+        let w=z.slice(1,3)
+        console.log(w);
+        // 11.split()方法 字符串分割成字符串数组
+        var he='hello'
+        var o=he.split('e')
+        console.log(he);//hello
+        console.log(o);//['h','llo']
+        // 12.substring() 方法 介于两个下标之间的字符 和slice()方法相同
+        let r='hello'
+        let q=r.substring(1,3)
+        console.log(r);//hello
+        console.log(q);//el
+        //  13.toLowerCase()和toUpperCase()方法
+        // toLowerCase()方法用于把字符串转换为小写
+        // toUpperCase()方法用于把字符串转换为大写
+        var zzy='hellO';
+        let da=zzy.toLocaleUpperCase()
+        var xiao=zzy.toLocaleLowerCase()
+        console.log(zzy);
+        console.log(da);//大写
+        console.log(xiao);//小写
+        // 14.trim() 方法 去除收尾多余的空格 空白符包括：空格、制表符 tab、换行符等其他空白符等。
+        let zyy='  hello   '
+        let hu=zyy.trim()
+        console.log(zyy);//   hello
+        console.log(hu);//hello
+    </script>
+</body>
+</html>

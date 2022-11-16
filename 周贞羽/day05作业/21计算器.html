@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 简易对象器
+        function input1() {
+            var num1 = prompt('请输入第一个数:');
+            return parseFloat(num1);
+        }
+        function input2() {
+            var num2 = prompt('请输入第二个数:');
+            return parseFloat(num2);
+        }
+        // 1. 加法运算
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        // 2. 减法运算
+        function sub(num1, num2) {
+            return num1 - num2;
+        }
+        // 3. 乘法运算
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+        // 4. 除法运算
+        function divition(num1, num2) {
+            return num1 / num2;
+        }
+        var str = '欢迎使用简易计算器:\n1. 加法运算;\n2. 减法运算;\n3. 乘法运算;\n4. 除法运算;\n5. 退出:\n请输入您的选项';
+        var option;
+        var result;
+        do {
+            option = parseFloat(prompt(str));
+            switch (option) {
+                case 1:
+                    result = add(input1(), input2());
+                    alert('结果是 ' + result);
+                    break;
+                case 2:
+                    result = sub(input1(), input2());
+                    alert('结果是 ' + result);
+                    break;
+                case 3:
+                    result = multiply(input1(), input2());
+                    alert('结果是 ' + result);
+                    break;
+                case 4:
+                    result = divition(input1(), input2());
+                    alert('结果是 ' + result);
+                    break;
+                case 5:
+                    alert('已退出程序');
+                    break;
+                default:
+                    alert('输入错误,请重新输入');
+                    break;
+            }
+        } while (option != 5);
+    </script>
+</body>
+
+</html>
