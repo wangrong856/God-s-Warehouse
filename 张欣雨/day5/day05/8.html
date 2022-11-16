@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 将url地址转换为对象形式
+    function fn(str) {
+        let index=str.indexOf("?")
+        // console.log(index);
+        str=str.slice(index+1).split("&")
+        // console.log(str);
+        let obj = {}
+        for(var i=0;i<str.length;i++) {
+            var arr1=str[i].split("=")
+            // console.log(arr1);
+                obj[arr1[0]]=arr1[1]
+        }
+        return obj
+    }
+   console.log( fn('http://172.16.254.254:8081/?userip=172.16.42.19&usermac=58696ce014e7&ma=11'));
+</script>
+</html>

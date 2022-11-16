@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 2：冒泡排序 选择排序  插入排序  快速排序
+    var arr=[1,2,3,4,6,5,7,8,9]
+
+    // 冒泡
+    // for(var i=0;i<=arr.length;i++) {
+    //     for(var k=0;k<=i;k++) {
+    //         var a=arr[k]
+    //         var b=arr[k+1]
+    //         var c=0
+    //         if(arr[k]>arr[k+1]) {
+    //             c=a 
+    //             a=b
+    //             b=c
+    //         }
+    //     }
+    // }
+    // console.log(arr);
+
+    // 选择排序
+        // for(var i=0;i<arr.length-1;i++) {
+        //     var maxi=i
+        //     for(var j=i+1;j<arr.length;j++) {
+        //         if(arr[j]<arr[maxi]) {
+        //             maxi=j
+        //         }
+        //     }
+        //     var k=arr[i]
+        //     arr[i]=arr[maxi]
+        //     arr[maxi]=k
+        // }
+        // console.log(arr);
+
+        // 插入排序
+    //     var newArr=[]
+    //    newArr.push(arr[0])
+    //     for(var i=1;i<arr.length;i++) {
+    //         let A=arr[i]
+    //         for(var j=newArr.length-1;j>=0;j--) {
+    //             let B=newArr[j]
+    //             if(A>B) {
+    //                 newArr.splice(j+1,0,A)
+    //                 break
+    //             }
+    //             if(j==0) {
+    //                 newArr.unshift(A)
+    //             }
+    //         }
+    //     }
+    //     console.log(newArr);
+
+
+    // 快速排序
+    arr=arr.sort((a,b)=>{
+        return a-b
+    })  
+    console.log(arr);
+</script>
+</html>

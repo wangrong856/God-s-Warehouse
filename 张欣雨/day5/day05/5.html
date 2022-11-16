@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 从一个数组中随机选出4个元素
+    var arr =[1,2,3,4,5,6,2,2,25,5,3]
+    var newArr=[]
+    while(newArr.length<4) {
+        var sj=Math.floor(Math.random()*arr.length)
+        // console.log(sj);
+        newArr.push(arr[sj])
+    }
+    console.log(newArr);
+</script>
+</html>
