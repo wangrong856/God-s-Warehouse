@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Father(uname, age) {
+        // this指向fu构造函数实例
+        this.uname = uname
+        this.age = age
+      }
+
+      function Son(uanme, age, score) {
+        Father.call(this, uanme, age)
+        // this指向子构造函数实例
+        this.score = score
+      }
+
+      var s = new Son('ldh', 23, 1000)
+    </script>
+  </body>
+</html>
