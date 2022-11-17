@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+      每一个实例对象有一个属性__proto__ 指向构造函数的原型对象
+      构造函数的原型对象也是一个对象 也有__proto__属性 
+      这样一层一层往上找就形成了原型链
+  
+    
+    */
+
+      function Fn() {
+        this.name = 123
+      }
+      // Fn.prototype.say = function () {
+      //   console.log('123')
+      // }
+      Fn.prototype = {
+        constructor: Fn,
+        say() {},
+      }
+      var f = new Fn()
+      console.log(f)
+      console.log(f.age)
+      f.say()
+
+      /* 
+      成员查找机制
+       当访问一个对象的属性(或者方法)，首先查找这个对象自身有没有该属性
+       如果没有就查找它的原型
+       如果还没有就查找原型对象的原型,
+       依此类推 一直找到null 
+       找不到 变量的值为undefined  方法报错
+      
+      
+      
+      */
+    </script>
+  </body>
+</html>
