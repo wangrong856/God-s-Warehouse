@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(str) {
+            str = str.split("")
+            var zhen = /[A-Z]/
+            var arr = str.map((t,i) => {
+                if (zhen.test(t)) {
+                    return '-' + t.toLowerCase()
+                }else if(!zhen.test(t) && str[i - 1] == '-'){
+                    return t.toUpperCase()
+                }else if(t == '-'){
+                    return t = ''
+                }
+                return t
+            })
+            return arr.join("")
+        }
+        console.log(fn("how-are-you"));
+        console.log(fn("howAreYou"));
+    </script>
+</body>
+
+</html>

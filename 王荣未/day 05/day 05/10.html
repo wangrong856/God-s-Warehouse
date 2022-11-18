@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(num) {
+            var flag = false
+            if (typeof num !== "number" || num <= 1) flag = false
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return flag = false
+                } else {
+                    return flag = true
+                }
+            }
+            return flag = true
+        }
+        console.log(fn(2));
+    </script>
+</body>
+
+</html>

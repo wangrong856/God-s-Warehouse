@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = prompt("使用计算器：1.加法运算：2.减法运算：3.乘法运算：4.除法运算：5.退出")
+        var num1
+        var num2
+        if (x !== '5' && new Set(x).size > 0) {
+            num1 = parseInt(prompt("输入第一个"))
+            num2 = parseInt(prompt("输入第二个"))
+        }
+        switch (String(x)) {
+            case '1':
+                alert(num1 + num2)
+                break;
+            case '2':
+                alert(num1 - num2)
+                break;
+            case '3':
+                alert(num1 * num2)
+                break;
+            case '4':
+                alert(num1 / num2)
+                break;
+            case '5':
+                //    window.close();
+                break;
+            default:
+                alert("输入错误")
+                break;
+        }
+    </script>
+</body>
+
+</html>

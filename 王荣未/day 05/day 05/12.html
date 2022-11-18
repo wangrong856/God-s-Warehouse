@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(arr) {
+            var index
+            var a = [...arr]
+            var ass = []
+            ass.push(a[0])
+            for (var i = 1; i < a.length; i++) {
+                for (var j = ass.length - 1; j >= 0; j--) {
+                    if (ass[j] < a[i]) {
+                        // 替换从第几个开始 替换 a[i] 
+                        ass.splice(j + 1, 0, a[i])
+                        break;
+                    }
+                    if (j === 0) {
+                        // 头部添加
+                        ass.unshift(a[i])
+                    }
+                }
+            }
+            // 输出
+            return ass
+        }
+        console.log(fn([1, 34, 5, 6, 7, 8, 9, 9, 8, 3, 4, 4, 5, 62, 65, 1]));
+    </script>
+</body>
+
+</html>

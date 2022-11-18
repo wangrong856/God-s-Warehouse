@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = ["王", "城", "龙", "未", "李", "松", "钱", "赵"]
+        var a = []
+        for (var i = 0; i < arr.length; i++) {
+            a.push(arr[Math.floor(Math.random() * arr.length - 1) + 1])
+            a = [...new Set(a)]
+            a.push(arr[Math.floor(Math.random() * arr.length - 1) + 1])
+        }
+        console.log(a.slice(0,4));
+    </script>
+</body>
+
+</html>

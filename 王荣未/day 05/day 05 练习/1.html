@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // var arrs = ['鹿晗', '王俊凯', '蔡徐坤', '彭于晏', '周杰伦', '刘德华', '赵本山']
+        // function fn(arr) {
+        //     var a = []
+        //     for (var i = 0; i < arr.length; i++) {
+        //         a.push(arr[Math.floor(Math.random() * 7 - 1) + 1])
+        //         a = [...new Set(a)];
+        //         a.push(arr[Math.floor(Math.random() * 7 - 1) + 1])
+        //     }
+        //     return a.slice(0, 4)
+        // }
+        // console.log(fn(arrs));
+
+
+        // var arr = ['鹿晗', '王俊凯', '蔡徐坤', '彭于晏', '周杰伦', '刘德华', '赵本山']
+        // arr.sort(function () {
+        //     return Math.random() - 0.5
+        // })
+        // let a = arr.slice(0, 4); console.log(a);
+        // var b = ['鹿晗', '王俊凯', '蔡徐坤', '彭于晏', '周杰伦', '刘德华', '赵本山']
+        // b.sort(function () {
+        //     return Math.random() - 0.5
+        // })
+        // console.log(b);
+
+        function fn(n){
+            if(n === 1)return 1
+            if(n === 2)return 2
+            console.log(n - 1,n - 2);
+            return fn(n - 1) + fn(n - 2)
+        }
+        // 
+        console.log(fn(5));
+
+
+    </script>
+</body>
+
+</html>
