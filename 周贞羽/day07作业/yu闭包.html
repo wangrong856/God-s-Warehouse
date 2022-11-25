@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数赋值给一个变量和下面调用是一样的
+        var map=(function(){
+            // 打车 起价
+            var start=5;
+            // 价钱初值
+            var total=0;
+            return {
+                // 形参
+                price:function(n){
+                    // 判断它的公里数小于等于3公里的话
+                    if(n<=3){
+                        // 总价就是不大于3公里的钱 
+                        total=start
+                    }else{
+                        // 如果超过3公里 就要+5块钱(减去基本的三公里不多要钱的)
+                        total=start+(n-3)*5
+                    }
+                    // 最后返回这个总价
+                    return total
+                },
+                // 堵车的情况下 形参
+                dc:function(flag){
+                    // 三元表达式 要返回值
+                    return flag?total+10:total
+                }
+            }
+        })
+        ()
+        // 实参 调用
+        console.log(map.price(5));
+        console.log(map.dc(true));
+    </script>
+</body>
+</html>

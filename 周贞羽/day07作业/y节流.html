@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 100px;
+        height: 200px;
+        background-color: pink;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        const box=document.querySelector('.box')
+        let i=1;
+        function mouseMoveFn(){
+            box.innerHTML=i++
+        }
+        function throttle(fn,t=500){
+            let startTime=0;
+            return function(){
+                let now=Date.now()
+                if(now-startTime>=t){
+                    fn()
+                    startTime=now
+                }
+            }
+        }
+        box.addEventListener('mousemove',throttle(mouseMoveFn))
+    </script>
+</body>
+</html>
