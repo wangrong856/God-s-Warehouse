@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 构造函数存在的问题
+      // function Person(name, age, sex) {
+      //   this.name = name
+      //   this.age = age
+      //   this.sex = sex
+      //   this.study = function () {
+      //     console.log('好好学习')
+      //   }
+      // }
+
+      // var p = new Person('zs', 12, '女')
+      // new Person('lc', 22, '男')
+      // new Person('ls', 23, '男')
+      // new Person('cka', 23, '女')
+
+      // 每创建一个对象，都会生成一个新的函数，就会存在浪费内存的问题
+      // 解决：所有的对象共用一个函数，这样就节省了内存
+      // 怎么做? ----------原型
+      // 构造函数通过原型分配的函数 让所有对象共享
+      // JavaScript规定，每一个构造函数都有一个prototype属性，
+      // 指向另一个对象(这个prototype属性就是一个对象)，
+      // 这个对象的所有属性和方法都会被构造函数所拥有
+      // 我们可以把哪些不变的方法，直接定义在构造函数.prototype
+      // 这个对象上，这样所有的构造函数的实例对象都可以访问这些方法
+
+      function Person(name, age, sex) {
+        this.name = name
+        this.age = age
+        this.sex = sex
+      }
+
+      Person.prototype.study = function () {
+        console.log('好好学习')
+      }
+
+      const p = new Person('cka', 23, '女')
+      // console.log(p.name)
+      // p.study()
+      // console.log(p)
+
+      // 实例对象都会有一个属性 __proto__ 指向构造函数的prototype 原型对象
+      // 之所以实例对象可以访问构造函数prototype原型对象上的属性和方法，就是因为实例对象有__proto__属性的存在
+      console.log(Person.prototype === p.__proto__) //true
+
+      // __proto__ 对象原型和原型对象prototype是等价的
+      // __proto__ 对象的原型的意义在于为对象的查找机制提供了一个方向，或者说是一条路线，  __proto__是一个非标准的属性
+      // 在项目开发中不可以使用这个属性__proto__ 它只是内部指向prototype
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            id:1,
+            name:"zs",
+            msg:{
+                arr:{
+                    gname:111,
+                    gsex:1111,
+                }
+            },
+            colors:['red','yellow','blue']
+        }
+        var o={}
+        function update(newobj,oldobj){
+            for(var k in oldobj){
+                var item=oldobj[k]
+                if(item instanceof Array){
+                newobj[k]=[]
+                update(newobj[k],item)
+            }else if(item instanceof Object){
+                newobj[k]={}
+                update(newobj[k],item)
+            }else{
+                newobj[k]=item;
+            }
+            }
+           
+        }
+        update(o,obj)
+        o.name="周羽"
+        o.msg.arr.gname=8990
+        console.log(o.name);
+        console.log(o.msg);
+    </script>
+</body>
+</html>
