@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        function out() {
+            var aa = 10
+
+            function inner() {
+                console.log(aa);
+            }
+            inner()
+        }
+        out()
+        // 闭包 (out)
+        // aa:10
+
+        function fn1() {
+            var price = 13
+            var total = 0
+
+            function fn2(n) {
+                if (n <= 3) {
+                    return total = 13
+                } else {
+                    return total = price + (n - 3) * 5
+                }
+            }
+            console.log(fn2(8));
+        }
+        fn1()
+
+        // 节流闭包
+        var box = document.querySelector('.box')
+        var i = 0
+
+        function fn3() {
+            box.innerHTML = i++
+
+        }
+
+        function fn4(fn, t = 500) {
+            // 初始时间
+            var start = 0
+            return function () {
+                // 当前时间
+                var time = +new Date()
+                if (time - start > t) {
+                    fn()
+                    start = time
+                }
+            }
+        }
+        box.addEventListener('mousemove',fn4(fn3))
+    </script>
+</body>
+
+</html>

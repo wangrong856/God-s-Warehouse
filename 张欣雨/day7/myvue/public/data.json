@@ -1,0 +1,364 @@
+{
+    "goods": [
+        {
+            "name": "冠能 小型犬挑食及美毛配方成犬全价狗粮 2....",
+            "id": 100312,
+            "sumMoney": "180.00",
+            "price": "139.00",
+            "subscribe": "入选狗粮品牌集合榜单",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "茂源 皮压骨 狗狗洁齿咬胶 4寸/3支",
+            "id": 102529,
+            "sumMoney": "5.00",
+            "price": "4.60",
+            "subscribe": "入选磨牙洁齿热销榜",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "路斯 健康优+组合 翅膀鸡胸肉 100g",
+            "id": 104470,
+            "sumMoney": "13.80",
+            "price": "9.90",
+            "subscribe": "入选肉制零食热销榜",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "卡乐 鸡肉犬用软罐头/鲜封包 100g",
+            "id": 104747,
+            "sumMoney": "4.18",
+            "price": "2.65",
+            "subscribe": "入选罐头湿粮热销榜",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "祥生王癣螨净 887药用浴液 犬 100ml",
+            "id": 105726,
+            "sumMoney": "16.00",
+            "price": "12.00",
+            "subscribe": "入选皮肤护理热销榜",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "美国麦德氏  IN-BASIC日常基础调理系...",
+            "id": 106302,
+            "sumMoney": "36.00",
+            "price": "22.00",
+            "subscribe": "入选补钙强骨回购榜",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "BOTH 山羊奶粉 450g",
+            "id": 106570,
+            "sumMoney": "118.00",
+            "price": "75.00",
+            "subscribe": "入选幼犬喂养榜单",
+            "state": 3,
+            "flag":false
+        },
+        {
+            "name": "康牧 耳康 复方达克罗宁滴耳剂 25ml",
+            "id": 106687,
+            "sumMoney": "55.00",
+            "price": "39.00",
+            "subscribe": "入选耳部护理心机榜",
+            "state": 4,
+            "flag":false
+        },
+        {
+            "name": "【保质期2021年7月】美国原装进口天衡宝 ...",
+            "id": 109836,
+            "sumMoney": "628.00",
+            "price": "389.00",
+            "subscribe": "入选雪纳瑞犬喜爱榜",
+            "state": 4,
+            "flag":false
+        },
+        {
+            "name": "【保质期2021年10月】美国原装进口卡比 ...",
+            "id": 111719,
+            "sumMoney": "809.00",
+            "price": "609.00",
+            "subscribe": "入选狗粮品牌集合榜单",
+            "state": 3,
+            "flag":false
+        },
+        {
+            "name": "美国麦德氏 IN-PLUS日常照护营养系列 ...",
+            "id": 112720,
+            "sumMoney": "138.00",
+            "price": "79.00",
+            "subscribe": "入选颜值靓丽美毛榜",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "小宠 洁耳舒 植物洗耳液 50ml",
+            "id": 114120,
+            "sumMoney": "25.00",
+            "price": "17.60",
+            "subscribe": "入选耳部护理心机榜",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "犬心保 驱虫牛肉块 S 体重11kg以下 单...",
+            "id": 115591,
+            "sumMoney": "31.00",
+            "price": "25.00",
+            "subscribe": "入选体内驱虫热销榜",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "蓝氏LegendSandy 牛肉海洋鱼全犬粮...",
+            "id": 117849,
+            "sumMoney": "135.00",
+            "price": "99.00",
+            "subscribe": "入选国产狗粮热销榜",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "美国麦德氏  IN-BASIC 日常基础调理...",
+            "id": 119196,
+            "sumMoney": "36.00",
+            "price": "22.00",
+            "subscribe": "入选微量元素热销榜",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "海洋之星 三文鱼配方 成犬粮 小颗粒 6kg",
+            "id": 125664,
+            "sumMoney": "409.00",
+            "price": "329.00",
+            "subscribe": "互动:(99%好评)",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "加拿大原装进口 爱肯拿Acana 无谷鸡肉鱼...",
+            "id": 131647,
+            "sumMoney": "676.00",
+            "price": "515.00",
+            "subscribe": "入选WDJ权威推荐榜",
+            "state": 3,
+            "flag":false
+        },
+        {
+            "name": "爱丽思IRIS 牛肉+米饭配方犬罐头 Nat...",
+            "id": 141251,
+            "sumMoney": "5.00",
+            "price": "3.60",
+            "subscribe": "入选罐头湿粮热销榜",
+            "state": 4,
+            "flag":false
+        },
+        {
+            "name": "猫、犬患耳螨的原因及治疗方式",
+            "id": 142859,
+            "sumMoney": "108",
+            "price": "83",
+            "subscribe": "伯纳天纯 低敏中大型犬成犬粮 15kg",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "伯纳天纯 中大型犬幼犬粮 15kg",
+            "id": 142861,
+            "sumMoney": "579.00",
+            "price": "379.00",
+            "subscribe": "\"大型犬\", \"中型犬\", \"幼犬\"",
+            "state": 3,
+            "flag":false
+        },
+        {
+            "name": "关节呵护\", \"颗粒\", \"关节片",
+            "id": 144157,
+            "sumMoney": "168.00",
+            "price": "95.00",
+            "subscribe": "入选关节呵护热销榜",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "英国MAG 关节生黄金版 适用全犬龄10片x...",
+            "id": 145833,
+            "sumMoney": "88.00",
+            "price": "78.00",
+            "subscribe": "入选养护关节回购榜",
+            "state": 4,
+            "flag":false
+        },
+        {
+            "name": "谷登GOLDEN 犬用高钙片 三钙合一200...",
+            "id": 145840,
+            "sumMoney": "42.00",
+            "price": "32.00",
+            "subscribe": "啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "谷登GOLDEN 犬用益生菌进口菌源5gx5...",
+            "id": 145844,
+            "sumMoney": "39.00",
+            "price": "18.00",
+            "subscribe": "入选肠胃呵护热销榜",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "麦富迪 狗狗零食 清口香系列 清口香奶棒 2...",
+            "id": 150590,
+            "sumMoney": "19.90",
+            "price": "12.90",
+            "subscribe": "入选磨牙洁齿热销榜",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "雷米高 澳宝 牛肉肝蔬菜营养全价成犬粮 20...",
+            "id": 154292,
+            "sumMoney": "247.00",
+            "price": "198.00",
+            "subscribe": "入选狗粮品牌集合榜单",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "雷米高 澳宝 牛肉肝蔬菜营养全价成犬粮 20...",
+            "id": 154296,
+            "sumMoney": "247.00",
+            "price": "198.00",
+            "subscribe": "入选狗粮品牌集合榜单",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "顽皮Wanpy 犬食 鸡肉丝 400g",
+            "id": 154339,
+            "sumMoney": "45.00",
+            "price": "29.00",
+            "subscribe": "入选雪纳瑞犬喜爱榜",
+            "state": 4,
+            "flag":false
+        },
+        {
+            "name": "MAG 犬专用三文鱼油 300ml",
+            "id": 165455,
+            "sumMoney": "168.00",
+            "price": "135.00",
+            "subscribe": "入选颜值靓丽美毛榜",
+            "state": 3,
+            "flag":false
+        },
+        {
+            "name": "日本爱丽思IRIS 洁齿除臭膳食犬罐头 10...",
+            "id": 173973,
+            "sumMoney": "8.00",
+            "price": "4.10",
+            "subscribe": "入选博美犬喜爱榜",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "顽皮Wanpy happy 全犬用醇香鸡肉条...",
+            "id": 184891,
+            "sumMoney": "35.00",
+            "price": "28.00",
+            "subscribe": "入选肉制零食热销榜",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "雷米高  蚤螨清香茅驱虫喷剂 60ml",
+            "id": 192700,
+            "sumMoney": "38.00",
+            "price": "23.00",
+            "subscribe": "入选大型犬驱虫榜",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "麦富迪 小型犬牛肉双拼成犬粮 2kg",
+            "id": 197731,
+            "sumMoney": "85.00",
+            "price": "55.00",
+            "subscribe": "入选博美犬喜爱榜",
+            "state": 4,
+            "flag":false
+        },
+        {
+            "name": "Red Bones红骨 磨牙牛膝盖骨 8cm",
+            "id": 198740,
+            "sumMoney": "12.00",
+            "price": "7.50",
+            "subscribe": "入选磨牙洁齿热销榜",
+            "state": 3,
+            "flag":false
+        },
+        {
+            "name": "顽皮Wanpy 犬用香脆牛肝片180g",
+            "id": 201665,
+            "sumMoney": "20.00",
+            "price": "17.50",
+            "subscribe": "入选肉制零食热销榜",
+            "state": 1,
+            "flag":false
+        },
+        {
+            "name": "亚禾 30支装混合口味洁齿磨牙棒270g 单...",
+            "id": 207401,
+            "sumMoney": "19.80",
+            "price": "16.80",
+            "subscribe": "入选磨牙洁齿热销榜",
+            "state": 0,
+            "flag":false
+        },
+        {
+            "name": "法国原装进口 NexGard尼可信 口服型体...",
+            "id": 208972,
+            "sumMoney": "223.00",
+            "price": "185.00",
+            "subscribe": "德玛西亚之力",
+            "state": 4,
+            "flag":false
+        },
+        {
+            "name": "海洋之星 臻越系列 加强配方成犬粮 小颗粒 1.5kg",
+            "id": 237600,
+            "sumMoney": "195.00",
+            "price": "129.00",
+            "subscribe": "互动:(100%好评)",
+            "state": 2,
+            "flag":false
+        },
+        {
+            "name": "可爱猫咪",
+            "id": 245714,
+            "sumMoney": "308",
+            "price": "254",
+            "subscribe": "可爱的猫咪，在线领养",
+            "state": 3,
+            "flag":false
+        },
+        {
+            "name": "醇粹Purich 黑标无谷冻干系列全价中小型...",
+            "id": 250128,
+            "sumMoney": "428.00",
+            "price": "259.00",
+            "subscribe": "入选雪纳瑞犬喜爱榜",
+            "state": 1,
+            "flag":false
+        }
+    ]
+}
