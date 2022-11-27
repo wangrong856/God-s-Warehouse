@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       箭头函数：简写   改变this指向
+
+      */
+
+      const fn = () => 4
+      const fn1 = (a, b) => a + b
+      const fn2 = () => ({ name: '123' })
+
+      // function fn3(x, y) {
+      //   y = y || 6
+      //   console.log(x, y)
+      // }
+      // fn3(3)
+
+      function fn4(x, y) {}
+      fn4(8)
+
+      /*
+       函数参数的默认值
+      */
+      function fn5(x = 8, y = 0) {
+        console.log(x, y)
+      }
+      fn5() //8 0
+      fn5(3) //3 0
+      fn5(9, 8) //9 8
+
+      // 给尾参数设置
+      function fn6(x, y = 9) {
+        console.log(x, y)
+      }
+      fn6(6)
+      fn6(8, 6)
+
+      console.log('-------------------------------------')
+      /* 
+       rest 参数（形式为...变量名） 多余参数
+      
+      */
+
+      function fn7(...arr) {
+        arr.forEach((item) => {
+          console.log(item)
+        })
+      }
+
+      fn7(4, 5, 6, 4, 3, 24, 5, 67, 7)
+
+      console.log(...[1, 2, 3])
+
+      function fn8(a, ...b) {
+        console.log(a, b)
+      }
+      fn8(3, 4, 5, 6, 7, 8, 9, 9)
+
+      var obj = {
+        name: 'zs',
+        age: 12,
+        flag: true,
+      }
+      var newObj = {
+        ...obj,
+        flag: true,
+      }
+      newObj.name = 'ls'
+      console.log(newObj)
+      console.log(obj)
+
+      var arr1 = [1, 2, 3]
+      var arr2 = [3, 4, 5]
+    </script>
+  </body>
+</html>

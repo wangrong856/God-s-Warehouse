@@ -1,0 +1,1 @@
+export default let a=10

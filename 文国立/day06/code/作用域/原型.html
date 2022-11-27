@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // Array.prototype.sum=function (){
+    //     var sum=0
+    //     for(var i=0;i<this.length;i++){
+    //         sum+=this[i]
+    //     }
+    //     return sum
+    // }
+    // var arr=[1,2,3,4]
+    // console.log(arr.sum());
+
+    //借用原型对象继承
+    // function Father(uname,age){
+    //     this.uname=uname
+    //     this.age=age
+    // }
+
+    // Father.prototype.money=function(){
+    //     console.log(100000);
+    // }
+    // function son(uname,age,score){
+    //     Father.call(this,uname,age)
+    //         this.score=score
+    // }
+    // var s=new Father('zs',12)
+    var num=1
+    function a(){
+        console.log(num);
+        function a1(){
+            num=3
+        }
+        var num=2
+        a1()
+    }
+    a()
+</script>

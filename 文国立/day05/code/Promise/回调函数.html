@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="./axios.min.js"></script>
+  </head>
+  <body>
+
+    <p>用户名 <input type="text" id="user"></p>
+    <p>密码 <input type="text" id="pass"></p>
+<button >登录</button>    
+
+  </body>
+</html>
+<script>
+  var username=document.querySelector('#user')
+  var password=document.querySelector('#pass')
+  var btn=document.querySelector('button')
+  btn.addEventListener('click',function(){
+    u=username.value
+    p=password.value
+    console.log(u,p);
+    axios
+      .post(`http://shiyansong.cn:8888/api/private/v1/login?`,{username:u,password:p})
+      .then(res=>{
+        console.log(res);
+        localStorage.setItem('locallogin',JSON.stringify(res.data))
+      })
+      
+    // fn(u,p)
+  })
+
+  //  function fn(u,p){
+  //   let login=JSON.parse(localStorage.getItem('locallogin'))
+  //   if(!login){
+      
+  //   }
+  // }
+  // fn(u,p)
+  // arr.forEach((item) => {})
+  // arr.every((item) => {})
+
+  // function fn() {
+  //   var a = 10
+  //   return a
+  // }
+
+  // var b = fn()
+  // console.log(b)
+
+  // function fn1(callback) {
+  //   var a = 10
+  //   var b = 23
+
+  //   // 进行不同的操作
+  //   callback && callback()
+  // }
+
+  // fn1(() => {
+  //   console.log(123)
+  // })
+
+  // fn1(() => {
+  //   document.write(123)
+  // })
+
+  // function fn2(callback) {
+  //   var arr = [1, 2, 3, 4, 5]
+
+  //   callback && callback(arr[4])
+  // }
+
+  // fn2((item) => {
+  //   console.log(item)
+  // })
+
+  // 需求  获取当前城市对象
+  // 先从本地读取，本地有  就返回本地  本地没有接口调用再存储到本地 再返回
+
+  // function getCurCity(callback) {
+  //   // 本地读取
+  //   let curcity = JSON.parse(localStorage.getItem('localcity'))
+  //   // 判断本地有没有
+  //   if (!curcity) {
+  //     // 没有  请求获取
+  //     axios
+  //       .get('http://shiyansong.cn:8080/area/info?name=北京')
+  //       .then((res) => {
+  //         // console.log(res.data.body)
+  //         // 本地存储
+  //         localStorage.setItem('localcity', JSON.stringify(res.data.body))
+  //         callback && callback(res.data.body)
+  //       })
+  //   } else {
+  //     // 有  读取本地数据
+  //     callback && callback(curcity)
+  //   }
+  // }
+
+  // getCurCity((city) => {
+  //   console.log(city, 'city')
+  // })
+ 
+//       async function fn(){
+//         await setTimeout(res=>{
+//           console.log(1+"秒");
+//         },1000)
+//         await setTimeout(res=>{
+//           console.log(3+"秒");
+//         },3000)
+//         await setTimeout(res=>{
+//           console.log(5+"秒");
+//         },5000)
+//       }
+// fn()
+
+
+function fn(obj){
+  return new Promise(resolve=>{
+    setTimeout(()=>{
+      resolve(obj);
+    },obj)
+  })
+}
+fn(1000).then(res=>{
+  console.log(res);
+})
+fn(3000).then(res1=>{
+  console.log(res1);
+})
+fn(5000).then(res2=>{
+  console.log(res2);
+})
+
+
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // arr.forEach((item) => {})
+      // arr.every((item) => {})
+
+      // function fn() {
+      //   var a = 10
+      //   return a
+      // }
+
+      // var b = fn()
+      // console.log(b)
+
+      function fn1(callback) {
+        var a = 10
+        var b = 23
+
+        // 进行不同的操作
+        callback && callback()
+      }
+
+      // fn1(() => {
+      //   console.log(123)
+      // })
+
+      // fn1(() => {
+      //   document.write(123)
+      // })
+
+      function fn2(callback) {
+        var arr = [1, 2, 3, 4, 5]
+
+        callback && callback(arr[4])
+      }
+
+      fn2((item) => {
+        console.log(item)
+      })
+    </script>
+  </body>
+</html>

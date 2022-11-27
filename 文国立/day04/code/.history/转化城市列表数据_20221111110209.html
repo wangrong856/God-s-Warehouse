@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // 获取数据
+      async function getlist() {
+        let { data: res } = await axios.get(
+          'http://shiyansong.cn:8080/area/city?level=1'
+        )
+        return res.body
+      }
+
+      /* 
+      [
+        {label: "北京", value: "AREA|88cff55c-aaa4-e2e0", pinyin: "beijing", short: "bj"},
+        {label: "安庆", value: "AREA|b4e8be1a-2de2-e039", pinyin: "anqing", short: "aq"}
+      ]
+
+      {
+        a:[
+          {}
+        ],
+        b:[{},{}],
+        c:[{},{}]
+      }
+      
+      
+      */
+
+      async function fn() {
+        let arr = await getlist()
+        // 定义空对象 存放城市列表
+        var obj = {}
+
+        // 遍历数组
+        arr.forEach((item) => {
+          // 截取首字母  a,b,c
+          let letter = item.short.slice(0, 1)
+          if (obj[letter]) {
+            // 对象中有该首字母的属性  他的值的数组中进行push添加
+            obj[letter].push(item)
+          } else {
+            // 对象中没有该首字母的属性  初始化
+            obj[letter] = [item]
+          }
+        })
+
+        console.log(obj)
+      }
+
+      fn()
+    </script>
+  </body>
+</html>

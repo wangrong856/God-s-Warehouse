@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name, age) {
+        this.name = name
+        this.age = age
+        this.sayHi = function () {
+          console.log(123)
+        }
+      }
+      // 每次实例化Person都会创建一个新的sayHi的函数， 函数的功能是一样，浪费内存
+
+      /* 
+       每一个构造函数都有一个prototype属性，指向另一个对象 ,prototype就是一个对象，这个对象的所有属性和方法
+      //  都会被构造函数所拥有
+      把不变的方法直接定义在prototype对象上，这样所有的实例都可以共享这些方法
+     
+     
+     */
+
+      // function Star(uname, age) {
+      //   this.uname = uname
+      //   this.age = age
+      // }
+
+      // Star.prototype.sayHi = function () {
+      //   console.log('张帆真能说')
+      // }
+
+      // let ldh = new Star('ldh', 13)
+      // let xyf = new Star('xyf', 20)
+      // ldh.sayHi()
+      // xyf.sayHi()
+
+      /* 
+        对象都会有一个属性__proto__指向构造函数的prototype原型对象
+        实例对象之所以可以使用构造函数prototype原型对象的属性和方法，就是因为对象有__proto__属性的存在
+        __proto__是一个非标准属性，实际开发中不使用，只是内部指向prototype
+      */
+      console.log(Star.prototype === ldh.__proto__) //true
+
+      console.log(ldh)
+
+      /* 
+       构造函数原型对象里有一个属性constructor属性，constructor我们称为构造函数，它指回构造函数本身
+       constructor 主要用于记录该对象引用与那个构造函数，它可以让原型对象重新指向原来的构造函数
+      */
+
+      function Star(uname, age) {
+        this.uname = uname
+        this.age = age
+      }
+
+      Star.prototype = {
+        sing() {
+          console.log('sing')
+        },
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+    作用域(scope) 规定了变量能够被访问的 范围，离开这个范围变量不能被访问
+    作用域 分为 全局和局部作用域
+    局部作用域分为 函数作用域 和 块作用域
+    函数作用域：在函数内部声明的变量只能在函数内部被访问，外部无法直接访问
+    1：函数内部被访问，外部无法直接访问
+  */
+      function counter(x, y) {
+        var s = x + y
+        console.log(s)
+      }
+      counter(10, 8)
+      //
+      // console.log(s) //报错  s is not defined
+      console.log(x)
+    </script>
+  </body>
+</html>

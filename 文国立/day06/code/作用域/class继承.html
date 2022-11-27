@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Father{
+        constructor(x,y){
+            this.x=x
+            this.y=y
+        }
+        say(){
+            console.log('say');
+        }
+        sum(){
+            console.log(this.x+this.y);
+        }
+    }
+    class son extends Father{
+        constructor(x,y){
+            //子类使用supper关键字 访问父类的方法 调用父类的构造函数
+            super(x,y)
+            this.x=x
+            this.y=y
+        }
+        sub(){
+            console.log(this.x-this.y);
+        }
+    }
+    var s=new son(3,4)
+    s.sub()
+    s.sum()
+</script>

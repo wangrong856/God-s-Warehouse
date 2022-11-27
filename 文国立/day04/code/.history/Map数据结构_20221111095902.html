@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+键值对  对象  Map
+ 对象的键名  是字符串类型   键---值
+ Map数据结构  键名可以是任意类型   值-----值
+ Map类似于键值对(key,value) 对象
+
+*/
+
+      var mymap = new Map([
+        ['li', 98],
+        ['wang', 99],
+      ])
+      console.log(mymap) //Map(2) {'li' => 98, 'wang' => 99}
+
+      var myset = new Set(['aaa', 'bbb', 'ccc']) //Set(3) {'aaa', 'bbb', 'ccc'}
+
+      var x = new Map()
+      // 添加键值
+      x.set('a', 'b')
+      x.set(true, 123)
+      x.set(false, 234)
+
+      console.log(x.has('b')) //false  判断是否存在某个键值
+
+      // x.delete('a') //删除某个键
+      console.log(x.get(true)) //获取键对应的值
+      console.log(x.size) //获取有多少个元素
+      // x.clear()
+
+      console.log(x.size)
+
+      for (let key of x.keys()) {
+        console.log(key)
+      }
+
+      for (let key of x.keys()) {
+        console.log(key)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+ 数组的解构
+
+*/
+
+      const [a, b, [aa, bb, cc]] = [12, 34, ['aaa', 'bbb']]
+      console.log(aa, cc)
+
+      /* 
+       对象的解构     
+      */
+
+      const {
+        name,
+        age,
+        colors,
+        colors: {
+          colname,
+          colnum,
+          colorobj: { n },
+        },
+      } = {
+        name: 'zs',
+        age: 18,
+        colors: {
+          colname: 'red',
+          colnum: 7,
+          colorobj: {
+            n: 123,
+          },
+        },
+      }
+
+      // console.log(colors)
+
+      /* 函数参数解构 */
+
+      function fn(obj) {
+        console.log(obj.name, obj.age, obj.num)
+      }
+      var obj = { name: 'zs', age: 12, num: 23 }
+    </script>
+  </body>
+</html>

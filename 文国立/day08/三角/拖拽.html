@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(50%,50%);
+        }
+     
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>点我</button>
+</body>
+</html>
+<script>
+    var div=document.querySelector('div')
+
+    div.addEventListener('mousedown',function(e){
+        var x=e.pageX-div.offsetLeft
+        var y=e.pageY-div.offsetTop
+        div.addEventListener('mousemove',move)
+        function move(e){
+            div.style.left=e.pageX-x+'px'
+            div.style.top=e.pageY-y+'px'
+        }
+        div.addEventListener('mouseup',function(){
+            div.removeEventListener('mousemove',move)
+        })
+    })
+    var btn=document.querySelector('button')
+    btn.onclick=function(){
+        var sum =3
+        btn.disabled=true
+        var timer=setInterval(()=>{
+            sum-- 
+            btn.innerHTML=sum+"秒后解除"
+            if(sum<=0){
+                btn.disabled=false
+               
+                clearInterval(timer)
+                btn.innerHTML='点我'
+            }
+        },1000)
+    }
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
+
+      Set本身是一个构造函数，用来生成 Set 数据结构。
+
+      */
+
+      var myset = new Set()
+      // 添加成员
+      myset.add(1)
+      myset.add(2)
+      myset.add(2)
+      // 长度
+      console.log(myset.size)
+
+      myset.delete(1) //删除
+
+      // 判断是否有11这个成员
+      console.log(myset.has(1))
+
+      /*
+            Set函数可以接受一个数组（或者具有 iterable 接口的其他数据结构）作为参数，用来初始化
+            */
+
+      var s = new Set([1, 2, 3, 4, 5, 4, 4])
+      console.log([...s])
+
+      //去除字符串里面的重复字符。
+      console.log([...new Set('ababbc')].join(''))
+
+      // ---------------------
+
+      // 遍历
+      var ss = new Set(['aaa', 'bbb', 'ccc', 'ddd'])
+
+      for (let key of ss.keys()) {
+        console.log(key)
+      }
+    </script>
+  </body>
+</html>

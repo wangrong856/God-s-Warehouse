@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // 获取数据
+      async function getlist() {
+        let { data: res } = await axios.get(
+          'http://shiyansong.cn:8080/area/city?level=1'
+        )
+        return res.body
+      }
+
+      /* 
+      [
+        {label: "北京", value: "AREA|88cff55c-aaa4-e2e0", pinyin: "beijing", short: "bj"},
+        {label: "安庆", value: "AREA|b4e8be1a-2de2-e039", pinyin: "anqing", short: "aq"}
+      ]
+      
+      
+      */
+    </script>
+  </body>
+</html>

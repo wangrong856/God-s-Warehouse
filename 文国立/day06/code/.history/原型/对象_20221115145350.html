@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 对象的三种创建方式
+      // 1：字面量
+      var obj = {}
+      // 2：new 关键字
+      var obj = new Object()
+      // 3：构造函数方式
+      function Person(name, age) {
+        this.name = name
+        this.age = age
+      }
+      var p = new Person('zs', 12)
+      console.log(p.name)
+      console.log(p.age)
+
+      // 实例成员
+      // 构造函数内部通过this添加的成员  name age实例成员  实例成员只能通过实例化的对象来访问
+
+      // 静态成员
+      // 构造函数本身上添加的成员  静态成员只能通过构造函数来访问
+
+      Person.sex = '男'
+      var ldh = new Person('刘德华', 60)
+      console.log(Person.sex)
+
+      //  内置构造函数
+
+      let date = new Date()
+      let o = new Object()
+
+      // 静态成员
+      // Object.assign  创建新对象  对象的合并
+      // Object.keys
+      // Object.values
+
+      var obj = {
+        name: 'zs',
+        age: 12,
+        sex: '男',
+      }
+
+      // ['name','age','sex']
+      Object.keys(obj).forEach((item) => {
+        console.log(item)
+      })
+
+      // Array  创建数组
+
+      //实例成员 forEach  every  some...
+    </script>
+  </body>
+</html>

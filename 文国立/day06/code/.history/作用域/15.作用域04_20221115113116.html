@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      /*
+				作用域 ： 作用的范围
+				script : 全局作用域
+					1. 声明在全局作用域中的变量，叫全局变量，可以通过window对象调用的。window.变量名
+					声明在全局作用域中的函数，叫全局函数，全局函数默认是window对象的方法。window.方法名()
+				函数作用域(局部作用域)
+				一旦进入作用域，就启动js解析器
+				
+				
+				一、预解析  var  function 形参
+					a = 1
+					fn = function (){...}
+					//找到var后，将var后的变量名提取出来，并给它初始化一个值undefined
+					//当变量与函数同名时，丢变量，保函数。
+					//当有多个script标签时，从上到下依次解析并执行第一个script标签,然后下一次，依此类推。
+					 在上面script标签中声明的东西，下面script标签中都可以使用。
+					 在下面script标签中声明的东西，上面使用都会报错。
+				二、逐行解读代码
+					1. 执行表达式
+					2. 函数调用
+						一、预解析 var function 形参
+							a = 2
+						二、逐行解读代码
+							1. 执行表达式
+							2. 函数调用
+			*/
+
+      alert(a) //undefined
+      var a = 1
+      alert(a) //1
+      function fn() {
+        alert(a)
+        var a = 2
+        alert(a)
+      }
+      fn()
+      alert(a)
+    </script>
+  </head>
+  <body></body>
+</html>

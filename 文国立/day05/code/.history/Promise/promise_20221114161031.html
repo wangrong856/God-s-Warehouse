@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function getCurCity() {
+        // 本地读取
+        let curcity = JSON.parse(localStorage.getItem('localcity'))
+        // 判断本地有没有
+        if (!curcity) {
+          // 没有  请求获取
+          return new Promise((resolve) => {
+            axios
+              .get('http://shiyansong.cn:8080/area/info?name=北京')
+              .then((res) => {
+                // console.log(res.data.body)
+                // 本地存储
+                localStorage.setItem('localcity', JSON.stringify(res.data.body))
+                resolve(res.data.body)
+              })
+          })
+        } else {
+          // 有  读取本地数据
+        }
+      }
+
+      getCurCity()
+    </script>
+  </body>
+</html>

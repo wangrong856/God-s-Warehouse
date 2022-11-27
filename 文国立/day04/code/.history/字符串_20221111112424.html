@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 'hello word'
+      var str = `你好${a}`
+
+      /* 
+      includes()：返回布尔值，表示是否找到了参数字符串。
+startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
+endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。
+      
+      */
+
+      console.log(a.includes('llo'))
+      console.log(a.startsWith('hell')) //true
+      console.log(a.endsWith('word'))
+
+      /* 
+      字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。
+      padStart()用于头部补全，padEnd()用于尾部补全。
+      第一个参数是字符串补全生效的最大长度，第二个参数是用来补全的字符串
+      */
+      console.log(a.padStart(4, 'ab'))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        forEach
+        find
+        findIndex
+        filter
+        map
+        some
+        every
+        reducer
+
+      */
+      var arr = [
+        { id: 1, name: '张坤', age: 12 },
+        { id: 2, name: '王坤', age: 23 },
+        { id: 3, name: '李坤', age: 24 },
+        { id: 4, name: '杨坤', age: 15 },
+        { id: 5, name: '张帅', age: 17 },
+        { id: 6, name: '王帅', age: 45 },
+        { id: 7, name: '刘帅', age: 23 },
+      ]
+
+      var res1 = arr.find((item) => {
+        return item.name.indexOf('张') > -1
+      })
+      console.log(res1)
+      var res2 = arr.findIndex((item) => {
+        return item.name.indexOf('张') > -1
+      })
+      console.log(res2)
+      var res3 = arr.filter((item) => {
+        return item.name.indexOf('张') > -1
+      })
+      console.log(res3)
+    </script>
+  </body>
+</html>

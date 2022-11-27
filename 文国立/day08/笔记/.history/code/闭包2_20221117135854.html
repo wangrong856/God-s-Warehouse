@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function out() {
+        var i = 0
+        function inner() {
+          i++
+          console.log(i)
+        }
+        return inner
+      }
+
+      //i 数据私有 外部也可以访问函数内部的变量
+      var fun = out()
+      fun()
+    </script>
+  </body>
+</html>

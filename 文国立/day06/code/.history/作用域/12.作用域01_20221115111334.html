@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      /*
+				作用域 ： 作用的范围
+				一旦进入作用域，就启动js解析器
+				一、在作用域中寻找一些东西？  var  function 形参
+					a = 1
+					fn = function fn(){ alert(2);}
+					//找到var后，将var后的变量名提取出来，并给它初始化一个值undefined
+				二、逐行解读代码
+					1. 执行表达式
+					2. 函数调用
+			*/
+      alert(a)
+      var a = 1
+      alert(a)
+      function fn() {
+        alert(2)
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

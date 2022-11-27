@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+            /*
+       箭头函数：简写   改变this指向
+
+      */
+
+            const fn = () => 4
+            const fn1 = (a, b) => a + b
+            const fn2 = () => ({ name: '123' })
+
+            // function fn3(x, y) {
+            //   y = y || 6
+            //   console.log(x, y)
+            // }
+            // fn3(3)
+
+            function fn4(x, y) {}
+            fn4(8)
+
+            /*
+       函数参数的默认值
+      */
+            function fn5(x = 8, y = 0) {
+              console.log(x, y)
+            }
+            fn5() //8 0
+            fn5(3) //3 0
+            fn5(9, 8) //9 8
+
+            // 给尾参数设置
+            function fn6(x,y=9)
+    </script>
+  </body>
+</html>

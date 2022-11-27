@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name, age) {
+        this.name = name
+        this.age = age
+        this.sayHi = function () {
+          console.log(123)
+        }
+      }
+      // 每次实例化Person都会创建一个新的sayHi的函数， 函数的功能是一样，浪费内存
+
+      /* 
+       每一个构造函数都有一个prototype属性，指向另一个对象 ,prototype就是一个对象，这个对象的所有属性和方法
+      //  都会被构造函数所拥有
+      把不变的方法直接定义在prototype对象上，这样所有的实例都可以共享这些方法
+     
+     
+     */
+
+      function Star(uname, age) {
+        this.uname = uname
+        this.age = age
+      }
+
+      Star.prototype.sayHi = function () {
+        console.log('张帆真能说')
+      }
+    </script>
+  </body>
+</html>

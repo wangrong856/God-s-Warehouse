@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 1
+      let b = 2
+      function f() {
+        let c
+        console.log(a)
+        console.log(d)
+        function g() {
+          let d = 'hahah'
+          console.log(b)
+        }
+      }
+      // f函数内部创建新的函数 g，就产生了新的函数作用域，作用域就产生了嵌套关系
+      // 作用域链的本质 是底层的变量查找机制，函数被执行时 会优先查找当前函数作用域中的变量，如果找不到则会
+      // 逐级查找父级作用域直到全局作用域 ，全局找不到 变量返回undefined  函数调用报错
+    </script>
+  </body>
+</html>

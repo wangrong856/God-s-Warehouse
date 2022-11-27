@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      /*
+				作用域 ： 作用的范围
+				一旦进入作用域，就启动js解析器
+				一、预解析  var  function 形参
+					
+					
+					a = 3
+					//找到var后，将var后的变量名提取出来，并给它初始化一个值undefined
+					//当变量与函数同名时，丢变量，保函数。
+				二、逐行解读代码
+					1. 执行表达式
+					2. 函数调用
+			*/
+      alert(a)
+      var a = 1
+      alert(a)
+      function a() {
+        alert(2)
+      }
+      var a = 2
+      alert(a)
+      function a() {
+        alert(3)
+      }
+      var a = 3
+      alert(a)
+    </script>
+  </head>
+  <body></body>
+</html>
