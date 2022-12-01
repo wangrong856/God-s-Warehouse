@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       var obj={
+        name:"zs"
+       }
+
+
+    //    Object.defineProperty(对象,拦截的对象属性,{
+    //      get(){return xx},  //访问拦截的属性就会执行get方法，返回值是获取到的值
+    //      set(v){}  //设置新值就会执行此方法，v就是设置的新值
+    //    })
+
+     var _name="zs"
+      Object.defineProperty(obj,'name',{
+        get(){
+            return _name
+        },
+        set(v){
+            _name=v
+        }
+      })
+
+
+    </script>
+</body>
+</html>

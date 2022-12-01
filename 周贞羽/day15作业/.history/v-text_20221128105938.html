@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>111</p>
+        <input type="text"/>
+        <div v-text="name"></div>
+    </div>
+    <script>
+        let data={
+            name:"星星老师很漂亮",
+            age:18,
+            height:160
+        }
+
+
+       Object.keys(data).forEach(key=>{
+        defineReactive(data,key,data[key])
+       })
+
+
+        function defineReactive(data,key,value){
+            Object.defineProperty(data,key,{
+                get(){
+                    return value
+                },
+                set(val){
+                    value=val
+                    // 数据发生变化，操作dom进行更新
+                    compile()
+                    
+                }
+            })
+        }
+
+
+        function compile(){
+            let app=document.getElementById("app")
+        //   拿到app下的所有子元素
+           const nodes=app.childNodes   //[p input div]
+        //    console.log(nodes) 
+        //    遍历所有的子元素
+            nodes.forEach(node=>{
+                
+            })
+        }
+
+  
+    </script>
+</body>
+</html>

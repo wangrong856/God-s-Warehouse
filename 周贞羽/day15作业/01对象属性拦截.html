@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  定义对象
+      let data = {
+        name: 'hello goods',
+      }
+
+      // Object.defineProperty(data, 'name', {
+      //   // 访问name属性就会执行此方法，返回值就是获取到的值
+      //   get() {
+      //     console.log('name属性被获取了')
+      //     return 'hello  kunkun'
+      //   },
+      //   // 设置新值就是执行此方法  newVal就是设置的新值
+      //   set(newVal) {
+      //     console.log('name属性被设置新值了')
+      //     console.log(newVal)
+      //   },
+      // })
+
+      //问题: get方法中返回的值始终是'hello  kunkun'  如何让返回值是 newVal 设置的新值
+
+      // 解决:定义一个中间变量 _name ，来中转get函数和set函数之间的联动
+
+      let _name = 'hello  kunkun'
+
+      Object.defineProperty(data, 'name', {
+        // 访问name属性就会执行此方法，返回值就是获取到的值
+        get() {
+          console.log('name属性被获取了')
+          return _name
+        },
+        // 设置新值就是执行此方法  newVal就是设置的新值
+        set(newVal) {
+          console.log('name属性被设置新值了')
+          console.log(newVal)
+          _name = newVal
+        },
+      })
+    </script>
+  </body>
+</html>

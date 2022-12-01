@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  定义对象
+      let data = {
+        name: 'hello goods',
+        age: 18,
+        height: 167,
+      }
+
+      //  遍历每一个属性
+      Object.keys(data).forEach((key) => {
+        // key 属性名
+        // data[key] 属性值
+        // data 原对象
+
+        defineReactive(data, key, data[key])
+      })
+
+      // 响应式转化方法
+      function defineReactive(data, key, val) {
+        /* 
+         data对象
+         key 属性名
+         val 中间变量
+        */
+        Object.defineProperty(data, key, {
+          // 访问name属性就会执行此方法，返回值就是获取到的值
+          get() {
+            console.log(val, 'val')
+            return val
+          },
+          // 设置新值就是执行此方法  newVal就是设置的新值
+          set(newVal) {
+            console.log(val, 'val')
+            val = newVal
+          },
+        })
+      }
+    </script>
+  </body>
+</html>
