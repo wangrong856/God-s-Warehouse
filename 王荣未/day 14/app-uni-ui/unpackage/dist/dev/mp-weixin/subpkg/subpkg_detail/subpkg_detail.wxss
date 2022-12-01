@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.goods-carts {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.vi_con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.vi_con .vi_top {
+  padding: 6px;
+  color: red;
+}
+.vi_con .vi_cen {
+  width: 100%;
+  display: flex;
+}
+.vi_con .vi_cen .vi_left {
+  width: 70%;
+  font-size: 25rpx;
+  padding: 6px;
+}
+.vi_con .vi_cen .vi_right {
+  flex: 1;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #cecece;
+  color: #ccc;
+}
+.vi_con .vi_bot {
+  font-size: 29rpx;
+  color: #cecece;
+  padding: 6px;
+}
+

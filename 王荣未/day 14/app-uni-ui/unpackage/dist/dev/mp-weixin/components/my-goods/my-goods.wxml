@@ -1,0 +1,1 @@
+<view class="vi_con"><view class="vi_left"><image src="{{item.goods_big_logo||nullImage}}" mode></image></view><view class="vi_right"><view class="vi_text">{{item.goods_name}}</view><view class="vi_price">{{"¥ "+$root.f0}}</view></view></view>

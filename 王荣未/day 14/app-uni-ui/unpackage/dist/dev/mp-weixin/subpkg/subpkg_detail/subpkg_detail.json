@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "黑马优购",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#bf0400",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-goods-nav": "/uni_modules/uni-goods-nav/components/uni-goods-nav/uni-goods-nav"
+  }
+}

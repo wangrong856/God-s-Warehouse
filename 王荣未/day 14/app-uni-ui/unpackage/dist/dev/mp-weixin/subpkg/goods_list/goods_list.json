@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "黑马优购",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#bf0400",
+  "navigationBarTextStyle": "white",
+  "onReachBottomDistance": 60,
+  "usingComponents": {
+    "my-goods": "/components/my-goods/my-goods"
+  }
+}

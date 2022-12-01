@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.vi_con {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15rpx;
+}
+.vi_con .vi_left {
+  width: 256rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vi_con .vi_left image {
+  width: 250rpx;
+  height: 250rpx;
+}
+.vi_con .vi_right {
+  flex: 1;
+  padding: 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.vi_con .vi_right .vi_text {
+  width: 442rpx;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  overflow: hidden;
+}
+.vi_con .vi_right .vi_price {
+  color: red;
+}
+

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.vi_body .vi_header_img {
+  width: 100%;
+}
+.vi_body .vi_body_ul {
+  display: flex;
+}
+.vi_body .vi_body_ul .vi_left {
+  width: 230rpx;
+}
+.vi_body .vi_body_ul .vi_right {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.swiper-item {
+  width: 100%;
+  height: 100%;
+}
+.swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+.vi_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.vi_header .vi_header_img {
+  width: 100%;
+}
+.vi_header .vi_li {
+  width: 20%;
+}
+.vi_header .vi_li image {
+  width: 100%;
+}
+
