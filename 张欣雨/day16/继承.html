@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    //     function Star(name,age){
+    //         this.name=name
+    //         this.age=age
+    //     }
+    //     Star.prototype.sing=function(){
+    //         console.log(123)
+    //     }
+    //  var s=   new Star('ldh',23)
+
+    //  function Person(name,age,sex){
+    //    this.name=name
+    //    this.age=age
+    //    this.sex=sex
+    //   }
+    //   Person.prototype.sing=function(){
+    //     console.log(123)
+    //   }
+    // var p=new Person('zs',34,'男')
+
+    // 第一种  call继承
+    // 无法继承原型上的属性和方法
+
+    // function Star(name,age){
+    //         this.name=name
+    //         this.age=age
+    //         this.sayHi=function(){
+    //             console.log(999)
+    //         }
+    //     }
+    // Star.prototype.sing=function(){
+    //     console.log(123)
+    // }
+     
+
+    //  function Person(name,age,sex){
+    //    Star.call(this,name,age)
+    //    this.sex=sex
+    //   }
+     
+    // var p=new Person('zs',34,'男')
+    // console.log(p)
+
+    // 第二种  原型继承
+    // 原型是所有实例的公共祖先， 原型改变，实例全部更改
+    // function Star(name,age){
+    //         this.name=name
+    //         this.age=age
+    //         this.sayHi=function(){
+    //             console.log(999)
+    //         }
+    //     }
+    // Star.prototype.sing=function(){
+    //     console.log(123)
+    // }
+    // Star.prototype.aa=1
+
+    //  function Person(sex){
+       
+    //    this.sex=sex
+    //   }
+    //   Person.prototype=new Star('goods',78)
+    // var p=  new Person('男')
+    // p.sayHi()
+
+    // 组合继承
+    // (call+原型)
+// 父类被调用两次  浪费资源
+    // function Star(name,age){
+    //         this.name=name
+    //         this.age=age
+    //         this.sayHi=function(){
+    //             console.log(999)
+    //         }
+    //     }
+    // Star.prototype.sing=function(){
+    //     console.log(123)
+    // }
+    // Star.prototype.aa=1
+
+    //  function Person(name,age,sex){
+    //    Star.call(name,age)
+    //    this.sex=sex
+    //   }
+
+    //   Person.prototype=new Star('goods',78)
+
+
+    class Star extends Person{
+        constructor(name,age){
+
+        }
+
+        sing(){
+
+            
+        }
+    } 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// console.log('---start---');//第一轮主线程
+ 
+//  setTimeout(() => {
+//    console.log('setTimeout');  // 将回调代码放入个宏任务队列，第二轮宏任务执行
+//  }, 0);
+  
+//  new Promise((resolve, reject) => {
+//    console.log('---Promise第一轮微任务同步执行---');//第一轮微任务同步执行
+//    resolve()
+//  }).then(()=>{
+//    console.log('Promise.then实例成功回调执行'); // 将回调代码放入微任务队列，第一轮宏任务执行完后立即执行
+//  });
+
+
+// 宏任务队列 1
+setTimeout(() => {
+  // 宏任务队列 2.1
+  console.log('timer_1');
+  setTimeout(() => {
+    // 宏任务队列 3
+    console.log('timer_3')
+  }, 0)
+  new Promise(resolve => {
+    console.log('new promise')
+    resolve()
+    
+  }).then(() => {
+    // 微任务队列 1
+    console.log('promise then')
+  })
+}, 0)
+ 
+setTimeout(() => {
+  // 宏任务队列 2.2
+  console.log('timer_2')
+}, 0)
+console.log('========== Sync queue ==========')
+
+
+    </script>
+</body>
+</html>
