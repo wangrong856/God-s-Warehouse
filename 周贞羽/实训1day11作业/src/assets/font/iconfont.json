@@ -1,0 +1,100 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "883929",
+      "name": "考勤",
+      "font_class": "kaoqin",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "1727361",
+      "name": "24组织架构、接口",
+      "font_class": "zuzhijiagoujiekou",
+      "unicode": "e89a",
+      "unicode_decimal": 59546
+    },
+    {
+      "icon_id": "1921128",
+      "name": "员工管理",
+      "font_class": "yuangongguanli",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "2011706",
+      "name": "金币",
+      "font_class": "jinbi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "2076308",
+      "name": " 首页",
+      "font_class": "shouye",
+      "unicode": "e89f",
+      "unicode_decimal": 59551
+    },
+    {
+      "icon_id": "3868278",
+      "name": "权限审批",
+      "font_class": "quanxianshenpi",
+      "unicode": "eb65",
+      "unicode_decimal": 60261
+    },
+    {
+      "icon_id": "5402687",
+      "name": "钱币3",
+      "font_class": "qianbi",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "6752588",
+      "name": "工资表审核",
+      "font_class": "gongzibiaoshenhe",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "7473692",
+      "name": "权限管理",
+      "font_class": "quanxianguanli",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "12974861",
+      "name": "审批",
+      "font_class": "shenpi",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "13168573",
+      "name": "员工",
+      "font_class": "yuangong",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "15419760",
+      "name": "公司设置 base/setting/company ",
+      "font_class": "basesettingcompany",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "16936336",
+      "name": "社保_icon",
+      "font_class": "shebao_icon",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    }
+  ]
+}
