@@ -1,6 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "then-fs": "^2.0.0"
-  }
-}
