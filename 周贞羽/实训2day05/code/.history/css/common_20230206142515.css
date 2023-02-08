@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+img{
+    border:0;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: url();
+}

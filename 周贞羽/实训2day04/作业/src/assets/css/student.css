@@ -1,0 +1,50 @@
+.text {
+  font-size: 12px;
+  margin: 0;
+  padding: 5px 20px;
+  color: #999;
+}
+.card i:hover {
+  cursor: pointer;
+}
+.bt-1 {
+  margin-top: 4px;
+}
+.card-fluid {
+  border: none;
+  padding: 15px;
+}
+.card .table th {
+  border-color: transparent;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  height: calc(1.5em + 1.5rem + 2px);
+}
+.form-group > label {
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 0;
+}
+.form-group > input {
+  flex: 1;
+}
+.form-group .input {
+  flex: 1;
+  padding-left: 10px;
+  display: flex;
+}
+.form-group .form-check {
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+.form-group .input select {
+  width: 140px;
+  margin-right: 20px;
+}
+.custom-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-size: 12px 12px;
+}

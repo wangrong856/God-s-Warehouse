@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/flexible.js"></script>
+    <style>
+        /* 媒体查询 media */
+        /* 分为24分 */
+        @media screen and (max-width:1024px) {
+            html{
+            font-size:42.66px;
+            }
+        }
+        @media screen and (min-width:1920px) {
+            html{
+            font-size: 80px;
+            }
+        }
+        *{
+            margin: 0;
+            padding:0
+        }
+        .box{
+            width: 3rem;
+            height: 3rem;
+            background-color: pink;
+        }
+        /* 
+        
+        pc端适配   1024px~1920px
+        */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

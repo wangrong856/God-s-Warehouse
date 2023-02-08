@@ -1,0 +1,13 @@
+.form-control:focus {
+  border-color:#e0e6ed;
+  box-shadow: none;
+}
+.form-control, .form-group, .input-group {
+  transition: none !important;
+}
+.text-blue {
+  color: #499FEE;
+}
+.text-blue:hover {
+  color: #499FEE;
+}
